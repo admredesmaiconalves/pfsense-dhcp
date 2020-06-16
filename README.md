@@ -12,3 +12,17 @@ cp /usr/local/www/services_dhcp.php /usr/local/www/services_dhcp.php.bkp && fetc
 
 Feito isso a interface já estará com a opções habilitas.
 
+
+OBS: Para separar os dispositivos moveis de notebook utilizei o seguinte class para pegar Android, Windows Phone e Iphone.
+
+<img src=dhcp-class.png>
+
+Adicinei dois pools um para notebook que este foi colocado para não ser membro do class "celular".
+
+<code>deny members of "celular"</code>
+
+O outro pool destinado aos dispositivos moveis adicionei como membro.
+
+<code>allow members of "celular"</code>
+
+<img src=member-class.png>
